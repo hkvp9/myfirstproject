@@ -26,8 +26,9 @@
 	}
 	
 	
-	Vehicle(String make, String Type, String color, int horsepower, String drivetrain){
+	Vehicle(String make,String model, String Type, String color, int horsepower, String drivetrain){
 		this.make = make;
+		this.model = model;
 		this.type = type;
 		this.color = color;
 		this.horsepower = horsepower;
@@ -35,9 +36,10 @@
 	}
 	
 	
-	Vehicle(String make, String Type,int horsepower, int year){
+	Vehicle(String make,String model,String Type,int horsepower, int year){
 		
 		this.make = make;
+		this.model = model;
 		this.type = type;
 		this.color = color;
 		this.year = year;
@@ -46,9 +48,16 @@
 	public static void main(String args[]){
 		Vehicle one = new Vehicle();
 		Vehicle two = new Vehicle ("Honda", "Civic", "sedan", "red", 205, "manual", 2016);
-		Vehicle three = new Vehicle("Chevy", "1500", "black", 205, "Automatic");
-		Vehicle four = new Vehicle("Ford", "Mustang", 355, 1967);
-			
+		Vehicle three = new Vehicle("Chevy", "1500", "Truck", "black", 205, "Automatic");
+		Vehicle four = new Vehicle("Ford", "Mustang", "muscle car", 355, 1967);
+		three.comparehorsepower(four);
+		System.out.println();
+	}
+	
+	void comparehorsepower(Vehicle another){
+		if(this.horsepower > another.horsepower){
+			System.out.println(this.make + this.model+ " has more horsepower than " + another.make + another.model);
+		}
 	}
 	
 	boolean compareHorsepower(Vehicle another){
