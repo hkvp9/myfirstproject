@@ -25,7 +25,7 @@ public class Ice {
 		this.flavor = flavor;
 		this.fill = fill;
 	}
-	Ice(String shape){
+	Ice(String shape){ 
 		this.shape = shape;
 	}
 	Ice (String color, String flavor, String fill){
@@ -45,7 +45,7 @@ public class Ice {
 	}
 	
 	public String toString(){
-		return("color"+ this.color +"\n"+"shape"+this.shape+"\n"+"flavor"+this.flavor+"\n"+"fill"+this.fill);
+		return("color "+ this.color +"\n"+"shape "+this.shape+"\n"+"flavor"+this.flavor+"\n"+"fill"+this.fill);
 	}
 	
 	//write the class, attributes, constructors, toString method. same as we ran here! 

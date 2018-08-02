@@ -4,16 +4,16 @@ public class Payroll {
 	public static double calculatePay(Employee employee){     //or employee one < one at a time.
 		employee.setSalary(90);
 		
-		//double salary;
+		double salary;
 		/*pay cycle is bi-weekly. this function will be calculating an employee's paycheck for that cycle based on 
 		 *the employees salary and payRate.
 		 */
 		//if the employee has a yearly salary 
-		if(employee.payRate == "yearly"){
-			salary = (employee.salary/52)*2;
+		if(employee.getPayRate() == "yearly"){
+			salary = (employee.getSalary()/52)*2;
 		}
-		else if(employee.payRate == "hourly"){
-			salary = (employee.salary * employee.hours *2);
+		else if(employee.getPayRate() == "hourly"){
+			salary = (employee.getSalary() * employee.getHours()*2);
 		}
 		else{
 			salary = 0.0;
@@ -29,9 +29,13 @@ public class Payroll {
 		Employee tom = new Employee("Tom Haverford",5, 44.90,"hourly","February 14th 2000","Part-Time", 28);
 		//System.out.println(tom.salary); < error, not visible = private in Employee class
 		Employee ron = new Employee ("Ron Swanson", 16, 23.60, "yearly","January 15th 2012", "Full-Time", 43);
-		System.out.println(Employee.someNumber);// See Employee class to see code written to be accessible in this class
-		System.out.println(calculatePay(tom));
-		System.out.println(calculatePay(ron));
+		
+		tom.compareSalary(ron);
+		ron.compareSalary(tom);
+		
+		//System.out.println(Employee.someNumber);// See Employee class to see code written to be accessible in this class
+		//System.out.println(calculatePay(tom));
+		//System.out.println(calculatePay(ron));
 		
 	}
 }

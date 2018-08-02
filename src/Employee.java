@@ -14,13 +14,86 @@
  //java util.Scanner
  class Employee {
 // declaring all the attributes
-	 String name;
-	 int employeeid;
-	 double salary;
-	 String payRate;
-	 String joinDate;
-	 String typeofEmployee;
-	 int hours;
+	 private String name;
+	 private int employeeid;
+	 private double salary;
+	private String payRate;
+	 public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getEmployeeid() {
+		return employeeid;
+	}
+
+	public void setEmployeeid(int employeeid) {
+		this.employeeid = employeeid;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public String getPayRate() {
+		return payRate;
+	}
+
+	public void setPayRate(String payRate) {
+		this.payRate = payRate;
+	}
+
+	public String getJoinDate() {
+		return joinDate;
+	}
+
+	public void setJoinDate(String joinDate) {
+		this.joinDate = joinDate;
+	}
+
+	public String getTypeofEmployee() {
+		return typeofEmployee;
+	}
+
+	public void setTypeofEmployee(String typeofEmployee) {
+		this.typeofEmployee = typeofEmployee;
+	}
+
+	public int getHours() {
+		return hours;
+	}
+
+	public void setHours(int hours) {
+		this.hours = hours;
+	}
+
+	public String getSsn() {
+		return ssn;
+	}
+
+	public void setSsn(String ssn) {
+		this.ssn = ssn;
+	}
+
+	public static int getSomeNumber() {
+		return someNumber;
+	}
+
+	public static void setSomeNumber(int someNumber) {
+		Employee.someNumber = someNumber;
+	}
+
+	private String joinDate;
+	 private String typeofEmployee;
+	 private int hours;
+	 private String ssn;
 	//when something is private it is only accessible in this/that class
 	 static int someNumber = 0;// needs to be added here to be accessible in Payroll class**
 	 
@@ -66,5 +139,32 @@
 		
 		
 	}
+	//toString() method
 	
-}
+	//methods, compared the salary of the current object with that of the object sent to it
+	void compareSalary(Employee another){
+		if(this.salary > another.salary){
+			System.out.println(this.name + "has higher salary than" + another.name);
+		}
+	}
+		
+		 boolean isSalaryHigher(Employee that){
+			if(this.salary > that.salary){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
