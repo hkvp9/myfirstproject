@@ -48,8 +48,8 @@
 	public static void main(String args[]){
 		Vehicle one = new Vehicle();
 		Vehicle two = new Vehicle ("Honda", "Civic", "sedan", "red", 205, "manual", 2016);
-		Vehicle three = new Vehicle("Chevy", "1500", "Truck", "black", 205, "Automatic");
-		Vehicle four = new Vehicle("Ford", "Mustang", "muscle car", 355, 1967);
+		Vehicle three = new Vehicle("Chevy ", "1500", "Truck", "black", 205, "Automatic");
+		Vehicle four = new Vehicle("Ford ", "Mustang", "muscle car", 355, 1967);
 		three.comparehorsepower(four);
 		System.out.println();
 	}
