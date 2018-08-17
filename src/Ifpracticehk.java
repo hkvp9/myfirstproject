@@ -5,7 +5,9 @@
 
 import java.util.Scanner;
 public class Ifpracticehk {
-	public static void main(String args[]) {
+	public static void main(String[] args) {
+		
+		
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("Get ready for a quiz!");
 		System.out.println("What is 2 + 6 ?");
